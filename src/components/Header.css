@@ -1,0 +1,252 @@
+.header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  margin-top: 0;
+  padding-top: 0;
+  background-image: url('/image/fondoHeader.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+.header-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.year-badge {
+  background-color: #F5A623;
+  border-radius: 50px;
+  padding: 20px 40px;
+  width: fit-content;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.year {
+  font-size: 80px;
+  font-weight: 900;
+  color: white;
+  line-height: 0.9;
+  letter-spacing: -2px;
+}
+
+.location {
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  margin-top: 5px;
+  letter-spacing: 0.5px;
+}
+
+.main-content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 0 40px;
+}
+
+.topics {
+  position: absolute;
+  right: 60px;
+  top: -5%;
+  transform: translateY(0);
+  text-align: right;
+  color: white;
+  max-width: 400px;
+}
+
+.topic-title {
+  font-size: 42px;
+  font-weight: 900;
+  color: #F5A623;
+  margin-bottom: 25px;
+  line-height: 1;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.topic-item {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  line-height: 1.1;
+  color: white;
+  font-style: italic;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.topic-item.highlight {
+  color: #F5A623;
+}
+
+.title-section {
+  text-align: center;
+}
+
+.special-label {
+  background-color: white;
+  color: #333;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 8px 20px;
+  border-radius: 30px;
+  display: inline-block;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  transform: rotate(-5deg);
+}
+
+.main-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title-masa {
+  font-size: 180px;
+  font-weight: 900;
+  color: #F5A623;
+  line-height: 0.85;
+  letter-spacing: -5px;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
+  font-style: italic;
+}
+
+.title-madre {
+  font-size: 180px;
+  font-weight: 900;
+  color: white;
+  line-height: 0.85;
+  letter-spacing: -5px;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.3);
+  font-style: italic;
+}
+
+.subtitle {
+  background-color: #F5A623;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 12px 40px;
+  border-radius: 30px;
+  display: inline-block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  font-style: italic;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.sena-logo {
+  width: 150px;
+  height: auto;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+@media (max-width: 1400px) {
+  .title-masa,
+  .title-madre {
+    font-size: 140px;
+  }
+
+  .topic-title {
+    font-size: 36px;
+  }
+
+  .topic-item {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header-content {
+    padding: 30px 40px;
+  }
+
+  .main-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .title-section {
+    margin-left: 0;
+  }
+
+  .topics {
+    text-align: center;
+  }
+
+  .title-masa,
+  .title-madre {
+    font-size: 100px;
+  }
+
+  .year {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    padding: 20px 30px;
+  }
+
+  .year {
+    font-size: 50px;
+  }
+
+  .location {
+    font-size: 14px;
+  }
+
+  .title-masa,
+  .title-madre {
+    font-size: 70px;
+  }
+
+  .topic-title {
+    font-size: 28px;
+  }
+
+  .topic-item {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    padding: 10px 30px;
+  }
+
+  .sena-logo {
+    width: 100px;
+  }
+}
