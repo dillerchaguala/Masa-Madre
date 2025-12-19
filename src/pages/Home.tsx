@@ -3,8 +3,11 @@ import Navbar from '../components/Navbar';
 import Header from '../components/Header';
 import './Home.css';
 
-// Importar videos (ruta relativa para que funcione en ejecutable Electron)
-const videoPan = 'videos/comoHacerPan.mp4';
+// Importar videos: usar archivo local en Electron y video hospedado externamente en la web
+const isElectron = navigator.userAgent.toLowerCase().includes('electron');
+const videoPan = isElectron
+  ? 'videos/comoHacerPan.mp4'
+  : 'https://drive.google.com/uc?export=download&id=1rifryUaiSxRlM5UdI5IAeLdyu5DV5AjA';
 
 const Home: React.FC = () => {
   const [playingVideo, setPlayingVideo] = useState<string | null>(null);
