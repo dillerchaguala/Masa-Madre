@@ -3,11 +3,14 @@ import Navbar from '../components/Navbar';
 import Header from '../components/Header';
 import './Home.css';
 
-// Importar videos: usar archivo local en Electron y video hospedado externamente en la web
-const isElectron = navigator.userAgent.toLowerCase().includes('electron');
-const videoPan = isElectron
-  ? 'videos/comoHacerPan.mp4'
-  : 'https://drive.google.com/uc?export=download&id=1rifryUaiSxRlM5UdI5IAeLdyu5DV5AjA';
+// Importar videos: usar archivo local en Electron y Google Drive en la web
+const isElectron =
+  typeof navigator !== 'undefined' &&
+  navigator.userAgent.toLowerCase().includes('electron');
+
+const localVideoPan = 'videos/comoHacerPan.mp4';
+const driveVideoEmbedUrl =
+  'https://drive.google.com/file/d/1rifryUaiSxRlM5UdI5IAeLdyu5DV5AjA/preview';
 
 const Home: React.FC = () => {
   const [playingVideo, setPlayingVideo] = useState<string | null>(null);
@@ -223,59 +226,71 @@ const Home: React.FC = () => {
               Así se puede hacer un pan con masa madre
             </p>
             <div className="video-container">
-              <div 
-                ref={videoWrapper2Ref}
-                className={`video-wrapper ${playingVideo === 'video2' ? 'playing' : ''} ${isFullscreen ? 'fullscreen' : ''}`}
-                onClick={() => togglePlay('video2')}
-                onMouseEnter={handleVideoWrapperHover}
-                onMouseLeave={() => playingVideo && setShowPlayButton(false)}
-              >
-                <video 
-                  ref={video2Ref}
-                  className="video-player"
-                  onClick={(e) => handleVideoClick(e, 'video2')}
-                  onEnded={handleVideoEnd}
-                  onTimeUpdate={(e) => handleTimeUpdate('video2', e)}
-                  onLoadedMetadata={(e) => handleLoadedMetadata('video2', e)}
+              {isElectron ? (
+                <div 
+                  ref={videoWrapper2Ref}
+                  className={`video-wrapper ${playingVideo === 'video2' ? 'playing' : ''} ${isFullscreen ? 'fullscreen' : ''}`}
+                  onClick={() => togglePlay('video2')}
+                  onMouseEnter={handleVideoWrapperHover}
+                  onMouseLeave={() => playingVideo && setShowPlayButton(false)}
                 >
-                  <source src={videoPan} type="video/mp4" />
-                  Tu navegador no soporta el elemento de video.
-                </video>
-                <div className="video-controls">
-                  <div className="progress-bar" onClick={(e) => handleProgressBarClick(e, 'video2')}>
-                    <div 
-                      className="progress" 
-                      style={{ width: `${(currentTime.video2 / (duration.video2 || 1)) * 100}%` }}
-                    ></div>
-                  </div>
-                  <div className="time-display">
-                    {formatTime(currentTime.video2)} / {formatTime(duration.video2)}
-                  </div>
-                  <div className="control-buttons">
-                    <div 
-                      className={`play-pause-btn ${playingVideo === 'video2' && showPlayButton ? 'visible' : ''}`}
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        togglePlay('video2');
-                      }}
-                    >
-                      <div className="play-icon">
-                        {playingVideo === 'video2' ? '❚❚' : '▶'}
-                      </div>
+                  <video 
+                    ref={video2Ref}
+                    className="video-player"
+                    onClick={(e) => handleVideoClick(e, 'video2')}
+                    onEnded={handleVideoEnd}
+                    onTimeUpdate={(e) => handleTimeUpdate('video2', e)}
+                    onLoadedMetadata={(e) => handleLoadedMetadata('video2', e)}
+                  >
+                    <source src={localVideoPan} type="video/mp4" />
+                    Tu navegador no soporta el elemento de video.
+                  </video>
+                  <div className="video-controls">
+                    <div className="progress-bar" onClick={(e) => handleProgressBarClick(e, 'video2')}>
+                      <div 
+                        className="progress" 
+                        style={{ width: `${(currentTime.video2 / (duration.video2 || 1)) * 100}%` }}
+                      ></div>
                     </div>
-                    <button 
-                      className="fullscreen-btn" 
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        toggleFullscreen('video2');
-                      }}
-                      aria-label="Pantalla completa"
-                    >
-                      ⛶
-                    </button>
+                    <div className="time-display">
+                      {formatTime(currentTime.video2)} / {formatTime(duration.video2)}
+                    </div>
+                    <div className="control-buttons">
+                      <div 
+                        className={`play-pause-btn ${playingVideo === 'video2' && showPlayButton ? 'visible' : ''}`}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          togglePlay('video2');
+                        }}
+                      >
+                        <div className="play-icon">
+                          {playingVideo === 'video2' ? '❚❚' : '▶'}
+                        </div>
+                      </div>
+                      <button 
+                        className="fullscreen-btn" 
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          toggleFullscreen('video2');
+                        }}
+                        aria-label="Pantalla completa"
+                      >
+                        ⛶
+                      </button>
+                    </div>
                   </div>
                 </div>
-              </div>
+              ) : (
+                <div className="video-wrapper">
+                  <iframe
+                    src={driveVideoEmbedUrl}
+                    className="video-player"
+                    title="Pan con masa madre"
+                    allow="autoplay; encrypted-media"
+                    allowFullScreen
+                  />
+                </div>
+              )}
             </div>
           </div>
         </div>
