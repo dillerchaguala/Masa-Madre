@@ -12,6 +12,11 @@ dist
 dist-ssr
 *.local
 
+# Builds y archivos generados grandes
+dist-electron/
+public/videos/comoHacerPan.mp4
+.tmp
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

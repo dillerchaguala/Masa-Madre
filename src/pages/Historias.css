@@ -1,0 +1,204 @@
+.historias-container {
+  max-width: 1200px;
+  margin: 100px auto 40px;
+  padding: 0 20px;
+}
+
+.historias-title {
+  font-size: 3rem;
+  color: #8B4513;
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.historias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  padding: 20px;
+}
+
+@media (min-width: 1200px) {
+  .historias-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.historia-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.historia-card:hover {
+  transform: translateY(-5px);
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* Mantiene relación de aspecto 16:9 */
+  background: #000;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.historia-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000;
+}
+
+.historia-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.video-expanded {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modal-video {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+}
+
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
+.close-modal:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.historia-content {
+  padding: 16px 18px;
+}
+
+.historia-title {
+  font-size: 1.8rem;
+  color: #8B4513;
+  margin-bottom: 15px;
+  font-weight: 800;
+}
+
+.historia-details {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 10px 12px;
+  background: rgba(139, 69, 19, 0.05);
+  border-radius: 12px;
+}
+
+.historia-author {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #8B4513;
+  margin: 0;
+}
+
+.historia-location {
+  font-size: 1rem;
+  color: #666;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.historia-location::before {
+  content: "📍";
+}
+
+.historia-contact {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4a4a4a;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.historia-contact:hover {
+  color: #8B4513;
+}
+
+.phone-icon {
+  font-size: 1.2rem;
+}
+
+.historia-description {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .historias-container {
+    margin: 80px auto 30px;
+  }
+
+  .historias-title {
+    font-size: 2.5rem;
+  }
+}

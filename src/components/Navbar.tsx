@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
         <div className="navbar-logo">
           <Link to="/" className="navbar-logo-link">
             <img 
-              src="/image/logo_pagina.png" 
+              src="image/logo_pagina.png" 
               alt="Masa Madre Logo" 
               className="navbar-logo-img"
             />
@@ -32,6 +32,22 @@ const Navbar: React.FC = () => {
               className={`nav-link ${location.pathname === '/recetas' ? 'active' : ''}`}
             >
               Recetas
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link 
+              to="/galeria" 
+              className={`nav-link ${location.pathname === '/galeria' ? 'active' : ''}`}
+            >
+              Galería
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link 
+              to="/historias" 
+              className={`nav-link ${location.pathname === '/historias' ? 'active' : ''}`}
+            >
+              Historias
             </Link>
           </li>
         </ul>

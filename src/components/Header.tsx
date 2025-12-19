@@ -2,7 +2,10 @@ import './Header.css'
 
 function Header() {
   return (
-    <header className="header">
+    <header
+      className="header"
+      style={{ backgroundImage: "url('image/fondoHeader.jpeg')" }}
+    >
       <div className="header-overlay">
         <div className="header-content">
           <div className="year-badge">
@@ -29,7 +32,7 @@ function Header() {
           </div>
 
           <div className="logo-container">
-            <img src="/image/logoSena1.png" alt="SENA Logo" className="sena-logo" />
+            <img src="image/logoSena1.png" alt="SENA Logo" className="sena-logo" />
           </div>
         </div>
       </div>

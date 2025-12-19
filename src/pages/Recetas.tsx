@@ -20,7 +20,7 @@ const recetasData: Receta[] = [
     nombre: "HOGAZA RUSTICA SEMIINTEGRAL",
     tiempo: "24 horas",
     dificultad: "Intermedio",
-    imagenPortada: "/image/hogaza.jpeg",
+    imagenPortada: "image/hogaza.jpeg",
     ingredientes: [
       {cantidad: "850 gramos", item: "harina"},
       {cantidad: "150 gramos", item: "harina integral de buena calidad"},
@@ -41,7 +41,7 @@ const recetasData: Receta[] = [
         ]
       }
     ],
-    imagen: "/image/hogaza.jpeg",
+    imagen: "image/hogaza.jpeg",
     imagenAttribution: "https://cookidoo.es/recipes/recipe/es-ES/r430278"
   },
   {
@@ -49,7 +49,7 @@ const recetasData: Receta[] = [
     nombre: "FOCACCIA TRADICIONAL",
     tiempo: "4-6 horas",
     dificultad: "Fácil",
-    imagenPortada: "/image/foccacia.jpeg",
+    imagenPortada: "image/foccacia.jpeg",
     ingredientes: [
       {cantidad: "500 gramos", item: "harina"},
       {cantidad: "30/50 ml", item: "aceite de oliva"},
@@ -73,7 +73,7 @@ const recetasData: Receta[] = [
         ]
       }
     ],
-    imagen: "/image/foccacia.jpeg",
+    imagen: "image/foccacia.jpeg",
     imagenAttribution: ""
   },
   {
@@ -81,7 +81,7 @@ const recetasData: Receta[] = [
     nombre: "HOT CAKES",
     tiempo: "30 minutos",
     dificultad: "Fácil",
-    imagenPortada: "/image/hotCakes.jpeg",
+    imagenPortada: "image/hotCakes.jpeg",
     ingredientes: [
       {cantidad: "100 gramos", item: "masa madre"},
       {cantidad: "1 pizca", item: "sal"},
@@ -103,7 +103,7 @@ const recetasData: Receta[] = [
         ]
       }
     ],
-    imagen: "/image/hotCakes.jpeg",
+    imagen: "image/hotCakes.jpeg",
     imagenAttribution: "https://nataliaquintanilla0.wixsite.com/misitio/post/hot-cakes-de-masa-madre"
   },
   {
@@ -111,7 +111,7 @@ const recetasData: Receta[] = [
     nombre: "MOLDE DE CENTENO, QUESO Y MIEL",
     tiempo: "8-10 horas",
     dificultad: "Intermedio",
-    imagenPortada: "/image/centeno.jpeg",
+    imagenPortada: "image/centeno.jpeg",
     ingredientes: [
       {cantidad: "500 gramos", item: "harina"},
       {cantidad: "200 gramos", item: "masa madre blanca"},
@@ -140,7 +140,7 @@ const recetasData: Receta[] = [
         texto: "Leudar a temperatura ambiente o en frio heladera hasta que crezca y llevar al horno maximo (230 a 250 grados) por 40 minutos."
       }
     ],
-    imagen: "/image/centeno.jpeg",
+    imagen: "image/centeno.jpeg",
     imagenAttribution: "Fotografía sacada de"
   },
   {
@@ -148,7 +148,7 @@ const recetasData: Receta[] = [
     nombre: "MASA BRIOCHE DULCE",
     tiempo: "6-8 horas",
     dificultad: "Avanzado",
-    imagenPortada: "/image/briocheDulce.jpeg",
+    imagenPortada: "image/briocheDulce.jpeg",
     ingredientes: [
       {cantidad: "600 gramos", item: "harina"},
       {cantidad: "40 ml", item: "leche"},
@@ -176,7 +176,7 @@ const recetasData: Receta[] = [
         ]
       }
     ],
-    imagen: "/image/briocheDulce.jpeg",
+    imagen: "image/briocheDulce.jpeg",
     imagenAttribution: "https://www.bonviveur.es/recetas/brioche-dulce"
   }
 ];

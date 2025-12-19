@@ -3,9 +3,8 @@ import Navbar from '../components/Navbar';
 import Header from '../components/Header';
 import './Home.css';
 
-// Importar videos
-const videoMasa = '/videos/comohacerMasa.mp4';
-const videoPan = '/videos/comoHacerPan.mp4';
+// Importar videos (ruta relativa para que funcione en ejecutable Electron)
+const videoPan = 'videos/comoHacerPan.mp4';
 
 const Home: React.FC = () => {
   const [playingVideo, setPlayingVideo] = useState<string | null>(null);
@@ -168,7 +167,7 @@ const Home: React.FC = () => {
               </p>
             </div>
             <div className="masa-madre-image-container">
-              <img src="/image/masaMadre.jpeg" alt="Masa Madre" className="masa-madre-main-img" />
+              <img src="image/masaMadre.jpg" alt="Masa Madre" className="masa-madre-main-img" />
               
             </div>
           </div>
@@ -180,58 +179,12 @@ const Home: React.FC = () => {
         <div className="como-hacer-content">
           {/* Video a la izquierda */}
           <div className="video-container">
-            <div 
-              ref={videoWrapper1Ref}
-              className={`video-wrapper ${playingVideo === 'video1' ? 'playing' : ''} ${isFullscreen ? 'fullscreen' : ''}`}
-              onClick={() => togglePlay('video1')}
-              onMouseEnter={handleVideoWrapperHover}
-              onMouseLeave={() => playingVideo && setShowPlayButton(false)}
-            >
-              <video 
-                ref={video1Ref}
+            <div className="video-wrapper">
+              <img
+                src="image/masa.jpg"
+                alt="Cómo hacer masa madre"
                 className="video-player"
-                onClick={(e) => handleVideoClick(e, 'video1')}
-                onEnded={handleVideoEnd}
-                onTimeUpdate={(e) => handleTimeUpdate('video1', e)}
-                onLoadedMetadata={(e) => handleLoadedMetadata('video1', e)}
-              >
-                <source src={videoMasa} type="video/mp4" />
-                Tu navegador no soporta el elemento de video.
-              </video>
-              <div className="video-controls">
-                <div className="progress-bar" onClick={(e) => handleProgressBarClick(e, 'video1')}>
-                  <div 
-                    className="progress" 
-                    style={{ width: `${(currentTime.video1 / (duration.video1 || 1)) * 100}%` }}
-                  ></div>
-                </div>
-                <div className="time-display">
-                  {formatTime(currentTime.video1)} / {formatTime(duration.video1)}
-                </div>
-                <div className="control-buttons">
-                  <div 
-                    className={`play-pause-btn ${playingVideo === 'video1' && showPlayButton ? 'visible' : ''}`}
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      togglePlay('video1');
-                    }}
-                  >
-                    <div className="play-icon">
-                      {playingVideo === 'video1' ? '❚❚' : '▶'}
-                    </div>
-                  </div>
-                  <button 
-                    className="fullscreen-btn" 
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      toggleFullscreen('video1');
-                    }}
-                    aria-label="Pantalla completa"
-                  >
-                    ⛶
-                  </button>
-                </div>
-              </div>
+              />
             </div>
           </div>
           

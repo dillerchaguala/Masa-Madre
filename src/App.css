@@ -32,7 +32,7 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('/image/fondo_pagina1.png') center/cover no-repeat fixed;
+  background: url('image/fondo_pagina.png') center/cover no-repeat fixed;
   background-attachment: fixed;
   z-index: -2;
   opacity: 0.7; /* Ajusta la opacidad de la imagen de fondo */
