@@ -14,9 +14,9 @@ interface Story {
 const stories: Story[] = [
   {
     id: 0,
-    title: ' Masa Madre',
+    title: 'Masa Madre',
     author: 'Masa Madre',
-    location: 'cide,  soacha',
+    location: 'CIDE, Soacha',
     phoneDisplay: ' ',
     phoneHref: '#',
     videoSrc: 'videos/presentacionmadre.mp4',
@@ -33,7 +33,7 @@ const stories: Story[] = [
   {
     id: 2,
     title: 'Alfredinos Pizza',
-    author: 'Ruben Dario Pinto Vera',
+    author: 'Rubén Darío Pinto Vera',
     location: 'KR 6D # 17 25 SUR, COMPARTIR',
     phoneDisplay: '314 436 5291',
     phoneHref: 'tel:3144365291',

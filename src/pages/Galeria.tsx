@@ -24,7 +24,7 @@ const Galeria: React.FC = () => {
       id: 2,
       imageUrl: 'galeria/ESMERALDA 3.jpg',
       title: 'Esmeralda Clásica',
-      description: 'Exquisito pan dulce con un toque de vainilla, decorado con azúcar glass. Su textura esponjosa y su sabor delicado lo convierten en el favorito de la casa.',
+      description: 'Exquisito pan dulce con un toque de vainilla, decorado con azúcar glas. Su textura esponjosa y su sabor delicado lo convierten en el favorito de la casa.',
       category: 'dulces'
     },
     {
