@@ -1,4 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
+import { GAME_DOWNLOAD_URL } from '../config/downloads';
 import './Footer.css';
 
 function Footer() {
@@ -38,6 +39,16 @@ function Footer() {
           >
             Historias
           </Link>
+          {GAME_DOWNLOAD_URL ? (
+            <a
+              href={GAME_DOWNLOAD_URL}
+              className="footer-link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Videojuego
+            </a>
+          ) : null}
         </nav>
 
         <div className="footer-right">
