@@ -39,6 +39,18 @@ function Footer() {
           >
             Historias
           </Link>
+          <Link
+            to="/creditos"
+            className={`footer-link ${location.pathname === '/creditos' ? 'active' : ''}`}
+          >
+            Créditos
+          </Link>
+          <Link
+            to="/referencias"
+            className={`footer-link ${location.pathname === '/referencias' ? 'active' : ''}`}
+          >
+            Referencias
+          </Link>
           {GAME_DOWNLOAD_URL ? (
             <a
               href={GAME_DOWNLOAD_URL}

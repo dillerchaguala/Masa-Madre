@@ -1,0 +1,71 @@
+.creditos-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px 60px;
+}
+
+.creditos-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  padding: 32px 24px 40px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.creditos-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 24px;
+  color: #3a2a1a;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.creditos-section {
+  margin-bottom: 24px;
+}
+
+.creditos-section-title {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  color: #5a3b22;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.creditos-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.creditos-item {
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: rgba(245, 235, 220, 0.7);
+}
+
+.creditos-name {
+  font-weight: 600;
+  color: #3a2a1a;
+  margin-bottom: 4px;
+}
+
+.creditos-role {
+  font-size: 0.95rem;
+  color: #5b4a3a;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .creditos-container {
+    padding: 40px 48px 48px;
+  }
+
+  .creditos-title {
+    font-size: 2.25rem;
+  }
+}

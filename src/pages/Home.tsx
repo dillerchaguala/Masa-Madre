@@ -156,6 +156,27 @@ const Home: React.FC = () => {
       <Navbar />
       <Header />
       {/* Aquí se pueden agregar más secciones de la página home */}
+      <section className="intro-section">
+          <p className="intro-text">
+            Esta cartilla digital hace parte del proyecto “Transferencia tecnológica para fortalecer la panificación artesanal con masa madre en panaderías populares y rurales de Colombia”, desarrollado en el municipio de Soacha y sus zonas de influencia. Su propósito es compartir con la comunidad en general los principales resultados, aprendizajes y experiencias que surgieron durante la ejecución de esta iniciativa, en la que participaron 615 panaderías de economía popular.
+            <br />
+            <br />
+            El proyecto fue liderado por Innovación y Competitividad del Centro Industrial y de Desarrollo Empresarial (CIDE) de la Regional Cundinamarca, en articulación con el Centro Nacional de Hotelería, Turismo y Alimentos (CNHTyA) de la Regional Distrito Capital. Durante su desarrollo, se promovió el uso de la masa madre como fermento natural, una técnica ancestral que no solo mejora el sabor y la textura del pan, sino que también aporta beneficios nutricionales y favorece prácticas más sostenibles en la panificación artesanal.
+            <br />
+            <br />
+            A través de esta cartilla, le invitamos a aprender de manera práctica y divertida sobre los procesos de fermentación natural, el cuidado de la masa madre y las buenas prácticas en la producción del pan artesanal. Además, encontrarán como extensión de esta, un juego interactivo diseñado para reforzar tus conocimientos y poner a prueba lo aprendido, combinando la tradición artesanal con la innovación tecnológica.
+            <br />
+            <br />
+            Los animamos a explorar cada sección con curiosidad y entusiasmo, para seguir fortaleciendo el arte de la panificación artesanal colombiana desde una mirada sostenible, creativa y comunitaria.
+            <br />
+            <br />
+            Carolina Cárdenas Herrera
+            <br />
+            Dinamizadora de Innovación y Competitividad
+            <br />
+            Centro Industrial y de Desarrollo Empresarial de Soacha
+          </p>
+      </section>
       <section className="home-content">
         <div className="container">
           <div className="masa-madre-section">
