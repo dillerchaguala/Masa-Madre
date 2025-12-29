@@ -25,10 +25,10 @@ const Creditos: React.FC = () => {
               </p>
             </div>
             <div className="creditos-item">
-              <p className="creditos-name">Wilson Quintero Cordoba</p>
+              <p className="creditos-name">Wilson Quintero Córdoba</p>
               <p className="creditos-role">
                 Experto TecnoParque<br />
-                Área de trabajo: TICS y IA<br />
+                Línea TICs y I.A<br />
                 SENA – TecnoParque Cazucá
               </p>
             </div>
