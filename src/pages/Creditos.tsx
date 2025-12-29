@@ -28,6 +28,7 @@ const Creditos: React.FC = () => {
               <p className="creditos-name">Wilson Quintero Cordoba</p>
               <p className="creditos-role">
                 Experto TecnoParque<br />
+                Área de trabajo: TICS y IA<br />
                 SENA – TecnoParque Cazucá
               </p>
             </div>
@@ -38,16 +39,22 @@ const Creditos: React.FC = () => {
           <h2 className="creditos-section-title">Equipo de diseño</h2>
           <div className="creditos-group">
             <div className="creditos-item">
+              <p className="creditos-name">José Santiago Vergara Tinjaca</p>
+              <p className="creditos-role">Diseñador</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="creditos-section">
+          <h2 className="creditos-section-title">Equipo desarrollador</h2>
+          <div className="creditos-group">
+            <div className="creditos-item">
               <p className="creditos-name">Jhon Jairo Cortes Sarmiento</p>
               <p className="creditos-role">Desarrollador</p>
             </div>
             <div className="creditos-item">
               <p className="creditos-name">Diller Adrian Chaguala Marin</p>
               <p className="creditos-role">Desarrollador</p>
-            </div>
-            <div className="creditos-item">
-              <p className="creditos-name">José Santiago Vergara Tinjaca</p>
-              <p className="creditos-role">Diseñador</p>
             </div>
           </div>
         </section>
