@@ -13,7 +13,7 @@ const Creditos: React.FC = () => {
             <div className="creditos-item">
               <p className="creditos-name">Carolina Cárdenas Herrera</p>
               <p className="creditos-role">
-                Dinamizadora de innovación y competitividad<br />
+                Dinamizadora de Innovación y Competitividad<br />
                 SENA – Centro Industrial y de Desarrollo Empresarial de Soacha
               </p>
             </div>
@@ -28,7 +28,7 @@ const Creditos: React.FC = () => {
               <p className="creditos-name">Wilson Quintero Córdoba</p>
               <p className="creditos-role">
                 Experto TecnoParque<br />
-                Línea TICs y I.A<br />
+                Línea TICS y IA<br />
                 SENA – TecnoParque Cazucá
               </p>
             </div>
@@ -69,8 +69,8 @@ const Creditos: React.FC = () => {
             <div className="creditos-item">
               <p className="creditos-name">Edward Fabián Medina Barajas</p>
               <p className="creditos-role">
-                Coordinador de formación integral, gestión educativa,
-                promoción y relaciones corporativas
+                Coordinador de Formación Integral, Gestión Educativa,
+                Promoción y Relaciones Corporativas
               </p>
             </div>
           </div>

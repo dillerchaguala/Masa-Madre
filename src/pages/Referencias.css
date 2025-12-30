@@ -52,8 +52,9 @@
 }
 
 .referencias-list a {
-  color: #8b4513;
+  color: #000;
   word-break: break-all;
+  text-decoration: underline;
 }
 
 .referencias-text {
