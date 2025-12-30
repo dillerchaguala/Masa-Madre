@@ -40,6 +40,9 @@
       "electron/**",
       "package.json"
     ],
+    "asarUnpack": [
+      "dist/videos/**"
+    ],
     "directories": {
       "output": "dist-electron"
     },
